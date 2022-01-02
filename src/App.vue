@@ -1,5 +1,8 @@
 <template>
-  Hello VUe3 and TypeScript!!
+  <div>
+    <h1>Hello VUe3 and TypeScript!!</h1>
+    <p>ちょっとだけsassもはいってます!</p>
+  </div>
 </template>
 
 <script lang="ts">
