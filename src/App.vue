@@ -6,6 +6,7 @@
     <button @click="changeAge('34')">本当の年齢を見てみよう</button>
     <p>{{ message }}</p>
     <p>この文字が表示されないな</p>
+    <p>winからのリポジトリを取ってきました</p>
   </div>
 </template>
 
