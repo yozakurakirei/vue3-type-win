@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="app.scss">
   <title>Vue3 learning</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 <body>
   <div class="html-area">
     <h1>Hello (..</h1>
-    <p>Vue3 Tutorial!!</p>
+    <div id="app">
+      {{ title }} - {{ author }} - {{ age }}
+      <button @click="age++">増加</button>
+      <button @click="age--">下げる</button>
+      <div @click="title = 'オレは絶対性格悪くない!'">タイトルの変更</div>
+      <div @click="author = 'Hiroiki Ariyoshi', title='Im definitely not a bad person.'">英語に変える</div>
+      <button @click="changeTitle">新しい本の名前になるよ</button>
+    </div>
+    <script src="app.js"></script>
   </div>
 </body>
 </html>
