@@ -11,12 +11,24 @@
   <div class="html-area">
     <h1>Hello (..</h1>
     <div id="app">
-      {{ title }} - {{ author }} - {{ age }}
-      <button @click="age++">増加</button>
-      <button @click="age--">下げる</button>
-      <div @click="title = 'オレは絶対性格悪くない!'">タイトルの変更</div>
-      <div @click="author = 'Hiroiki Ariyoshi', title='Im definitely not a bad person.'">英語に変える</div>
-      <button @click="changeTitle">新しい本の名前になるよ</button>
+      <div v-if="showBox">
+        <ul class="book-area">
+          <li v-for="book in books" :class="{ fav: book.isFav }">
+            <img :src="book.img" :alt="book.title">
+            <p>{{ book.title }}</p>
+            <p>{{ book.author }}</p>
+            <button @click="toggleClass(book)">お気に入り</button>
+          </li>
+        </ul>
+      </div>
+      <button @click="ToggleShowBox">
+        <span v-if="showBox">非表示</span>
+        <span v-else>表示</span>
+      </button>
+      <p v-show="showBox">showBoxがfalseになったら消える</p>
+      <p v-if="showBox">v-ifでの分も消える</p>
+      <p v-else>お疲れ様でした</p>
+      <br>
     </div>
     <script src="app.js"></script>
   </div>

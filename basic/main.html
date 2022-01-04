@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.scss">
+  <title>Vue3 learning</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+  <div class="html-area">
+    <div id="app">
+      <!-- login button -->
+      <button @click="toggleLogin">
+        <span v-if="showLogin">ログイン</span>
+        <span v-else>ログアウト</span>
+      </button>
+      <!-- non login -->
+      <div v-show="showLogin">
+        <p>ログイン前のページです</p>
+        <p>さっそくログインしてみよう</p>
+      </div>
+      <!-- login -->
+      <div v-show="!showLogin">
+        <p>ログイン後のページをここに書きます</p>
+        <p>作業が終わったらログアウトしましょう</p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </div>
+</body>
+</html>
